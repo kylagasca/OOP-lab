@@ -1,0 +1,59 @@
+public class BloodData {
+		String bloodType;
+		String rhFactor;
+	
+	public BloodData(){
+		this.bloodType = "O";
+		this.rhFactor = "+";
+	}
+	public BloodData(String bt, String rh){
+		this.bloodType = bt;
+     	this.rhFactor = rh;
+	}
+	public void display() {
+		System.out.print(bloodType + rhFactor + "is added to the blood bank");
+	}
+}
+
+
+___________________________________________________________________
+  
+import java.util.Scanner;
+public class RunBloodData {
+	public static void main(String[] args){
+	
+	Scanner SC = new Scanner(System.in);
+	BloodData b = new BloodData();
+
+    	System.out.println("Enter blood type of patient:");
+    	String input1 = SC.nextLine();
+    	
+    	System.out.println("Enter the Rhesus factor (+ or -)");
+    	String input2 = SC.nextLine();
+    	
+    	if(input1.equals("O")) {
+    		System.out.print("O" + input2 + " is added to the blood bank.");
+    	}
+    	else if (input1.equals("A")) {
+    		System.out.print("A" + input2 + " is added to the blood bank.");
+    	}
+    	else if (input1.equals("B")) {
+    			System.out.print("B" + input2 + " is added to the blood bank.");
+    	}
+    	else if (input1.equals("AB")) {
+    		System.out.print("AB" + input2 + " is added to the blood bank.");
+    	}
+    	else if (input2.isEmpty() || input1.isEmpty()){
+    		System.out.print("Invalid");
+    	}
+    	else if (input2.isEmpty() || input1.isEmpty()){
+    		System.out.print("Invalid");
+    	}
+   
+    	else{
+    		b.display();
+    	}
+    
+	}
+}
+    	
